@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',30);
             $table->string('description',25);
-            $table->string('image',20);
+            $table->string('image',40);
             $table->double('price');
             $table->Integer('rentTimeInMonths');
             $table->timestamps();
