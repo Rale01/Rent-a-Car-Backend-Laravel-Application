@@ -23,6 +23,8 @@ Route::resource('rentalagents', RentalAgentController::class);
 //pretraga auta po imenu
 Route::get('/search/cars', [SearchController::class, 'searchCars']);
 
+Route::get('/cars', [CarController::class, 'index']);
+
 //METODE ZA KOJE NAM TREBA LOGIN
 Route::group(['middleware' => ['auth:sanctum']], function () {
     //TRANSACTIONS
