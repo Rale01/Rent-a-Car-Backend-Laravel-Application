@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\RentalAgentController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,7 +21,15 @@ Route::resource('rentalagents', RentalAgentController::class);
 
 //METODE ZA KOJE NAM TREBA LOGIN
 Route::group(['middleware' => ['auth:sanctum']], function () {
-  
+    //TRANSACTIONS
+    Route::patch('transactions/alterTheStatus/{id}', [TransactionController::class, 'updateStatus']);
+
+    Route::post('transactions', [TransactionController::class, 'store']);
+    
+    Route::put('transactions/{id}', [TransactionController::class, 'update']); 
+    
+    Route::delete('transactions/{id}', [TransactionController::class, 'destroy']); 
+
     //CARS
     Route::post('cars', [CarController::class, 'store']);
 
