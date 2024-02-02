@@ -18,4 +18,14 @@ class Car extends Model
         'price',
         'rentTimeInMonths'
     ];
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
+    public function carType()
+    {
+        return $this->belongsTo(CarType::class);
+    }
 }

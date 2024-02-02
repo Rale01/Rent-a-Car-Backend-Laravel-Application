@@ -14,4 +14,19 @@ class Transaction extends Model
     protected $fillable = [
         'date',
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function rentalAgent()
+    {
+        return $this->belongsTo(RentalAgent::class);
+    }
+
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
+    }
 }
