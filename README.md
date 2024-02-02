@@ -25,6 +25,12 @@ Rent-A-Car is a Laravel application designed to facilitate car rentals. It allow
 - Transaction Management:
   - Users can create, update, and delete transactions.
   - Admins can modify the status of transactions.
+ 
+## Eloquent relationships between models in aplication using Entity Relationship Diagram:
+
+<p align="center">
+  <img width="60%" src="rent-a-car-backend/RENTACAR.png">
+</p>
 
 ## Use Cases
 1. **User Registration**: New users can register for an account.
