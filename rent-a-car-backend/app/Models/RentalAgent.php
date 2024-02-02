@@ -19,7 +19,7 @@ class RentalAgent extends Model
         'telephone',
     ];
 
-    public function putsForRent()
+    public function transactions()
     {
         return $this->belongsToMany(Transaction::class);
     }
