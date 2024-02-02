@@ -9,7 +9,7 @@ class RentalAgent extends Model
 {
     use HasFactory;
 
-    protected $table = 'RentalAgents';
+    protected $table = 'rental_agents';
 
     protected $fillable = [
         'name',
