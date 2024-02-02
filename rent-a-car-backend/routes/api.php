@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\RentalAgentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,6 +14,9 @@ Route::post('login', [AuthController::class, 'login']);
 Route::get('cars', [CarController::class, 'index']);
 
 Route::get('cars/{id}', [CarController::class, 'show']); 
+
+//RENTALAGENTS
+Route::resource('rentalagents', RentalAgentController::class);
 
 //METODE ZA KOJE NAM TREBA LOGIN
 Route::group(['middleware' => ['auth:sanctum']], function () {
